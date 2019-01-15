@@ -1,17 +1,17 @@
-var movementLimit = $("#top-category-slider li")
+var movementLimit = $("#element-containing-woocommerce-product-listings li")
     .first()
     .outerWidth(true);
 
-  var numberOfItems = $("#top-category-slider li").length;
+  var numberOfItems = $("#element-containing-woocommerce-product-listings li").length;
 
   var limitSelector = 0;
 
-  $("#top-category-wrapper .clickable-right-triangle").on("click", function() {
+  $("#.clickable-right-triangle").on("click", function() {
     var movementLimit = $(
-      "#top-category-slider li:eq(" + String(limitSelector) + ")"
+      "#element-containing-woocommerce-product-listings li:eq(" + String(limitSelector) + ")"
     ).outerWidth(true);
     if (numberOfItems - limitSelector > 3) {
-      $("#top-category-slider li")
+      $("#element-containing-woocommerce-product-listings li")
         .first()
         .animate(
           {
@@ -23,7 +23,7 @@ var movementLimit = $("#top-category-slider li")
           }
         );
     } else {
-      $("#top-category-slider li")
+      $("#element-containing-woocommerce-product-listings li")
         .first()
         .animate(
           {
@@ -37,12 +37,12 @@ var movementLimit = $("#top-category-slider li")
     }
   });
 
-  $("#top-category-wrapper .clickable-left-triangle").on("click", function() {
+  $(".clickable-left-triangle").on("click", function() {
     var movementLimit = $(
       "#top-category-slider li:eq(" + String(limitSelector) + ")"
     ).outerWidth(true);
     if (limitSelector != 0) {
-      $("#top-category-slider li")
+      $("#element-containing-woocommerce-product-listings li")
         .first()
         .animate(
           {
